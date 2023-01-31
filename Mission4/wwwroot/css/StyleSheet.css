@@ -1,0 +1,32 @@
+﻿.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding-bottom: 1em;
+}
+
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+html, head {
+    height: 100%;
+    margin: 0;
+}
+
+
+img {
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+label{
+    font-size: 30px;
+    color: royalblue;
+    width: 250px;
+    display: inline-block;
+}
