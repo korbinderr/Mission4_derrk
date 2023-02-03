@@ -1,10 +1,8 @@
-﻿
-
-//call this function whenever the button in the form is clicked
+﻿//call this function whenever the button in the form is clicked
 $("#btnCalculate").click(function () {
 
     // create all the variables from the form and multiply against their weight in the overall grade
-    var assign = $("#assign").val() *.5;
+    var assign = $("#assign").val() * .5;
     var group = $("#group").val() * .1;
     var quiz = $("#quiz").val() * .1;
     var midterm = $("#midterm").val() * .1;
@@ -12,7 +10,7 @@ $("#btnCalculate").click(function () {
     var intex = $("#intex").val() * .1;
 
     // add these numbers together to get the overall grade
-    var numGrade = (assign + group + quiz + midterm + final + intex);
+    var numGrade = sum(assign + group + quiz + midterm + final + intex);
     var letGrade = "";
 
     // iterate through to find what letter grade corresponds with the numeric grade
@@ -25,7 +23,7 @@ $("#btnCalculate").click(function () {
     else if (numGrade >= 90) {
         letGrade = "A-"
     }
-    else if (numGrade >=87) {
+    else if (numGrade >= 87) {
         letGrade = "B+"
     }
     else if (numGrade >= 84) {
