@@ -2,15 +2,15 @@
 $("#btnCalculate").click(function () {
 
     // create all the variables from the form and multiply against their weight in the overall grade
-    var assign = $("#assign").val() * .5;
-    var group = $("#group").val() * .1;
-    var quiz = $("#quiz").val() * .1;
-    var midterm = $("#midterm").val() * .1;
-    var final = $("#final").val() * .1;
-    var intex = $("#intex").val() * .1;
+    var assign = ($("#assign").val()) * .5;
+    var group = ($("#group").val()) * .1;
+    var quiz = ($("#quiz").val()) * .1;
+    var midterm = ($("#midterm").val()) * .1;
+    var final = ($("#final").val()) * .1;
+    var intex = ($("#intex").val()) * .1;
 
     // add these numbers together to get the overall grade
-    var numGrade = sum(assign + group + quiz + midterm + final + intex);
+    var numGrade = (assign + group + quiz + midterm + final + intex);
     var letGrade = "";
 
     // iterate through to find what letter grade corresponds with the numeric grade

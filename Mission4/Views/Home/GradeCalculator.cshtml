@@ -2,27 +2,30 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Calculator";
+    ViewData["Title"] = "Did You Fail?";
     ViewData["TabPic"] = "img/recordercliff.JPG";
 }
+
+@model GradeCalcModel; 
 
 <div>
     <h2>GRADE CALCULATOR</h2>
     <h4>Input grade percentages for each of the following categories:</h4><br />
-    <form>
+    <form method="post">
+        <div asp-validation-summary="All"></div>        
         <label>Assignments:</label>
-        <input id="assign" /><br /><br />
+        <input id="assign" asp-for="assignments" /><br /><br />
         <label>Group Project:</label>
-        <input id="group" /><br /><br />
+        <input id="group" asp-for="group" /><br /><br />
         <label>Quizzes:</label>
-        <input id="quiz" /><br /><br />
+        <input id="quiz" asp-for="quizzes" /><br /><br />
         <label>Midterm Exam:</label>
-        <input id="midterm" /><br /><br />
+        <input id="midterm" asp-for="midtermE" /><br /><br />
         <label>Final Exam:</label>
-        <input id="final" /><br /><br />
+        <input id="final" asp-for="finalE" /><br /><br />
         <label>INTEX:</label>
-        <input id="intex" /><br /><br />
-        <input id="btnCalculate" type="button" value="Calculate Grade!" /><br /><br /><br />
+        <input id="intex" asp-for="INTEX" /><br /><br />
+        <input id="btnCalculate" type="submit" value="Calculate Grade!" /><br /><br /><br />
     </form>
 </div>
 
